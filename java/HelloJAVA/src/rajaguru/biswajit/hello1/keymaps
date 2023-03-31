@@ -1,0 +1,51 @@
+--------------------
+IDEA
+
+
+C-, recent files
+C-S-J Join lines
+C-.
+C-A-[click,up,down] Multicursors
+C-[PgUp. PgDn]-[shift]
+C-S-D,C-D Copy lines [down,just copy]
+C-L delete line
+C-[del,bkspc] delete till end of word to [right,left]
+C-[right,left] Move one word to [right, left]
+C-],[
+C-A-S-][
+C-S-enter
+Drag-tab to activate split window
+C-k X See available templates
+C-Spc activate code completion
+S-enter complete line
+C-A-A Actions palette
+S-S Search Everywhere
+
+A-S-= ,word -> string -> sentence
+A-S-= at the start of the block header like if, will select the block int to steps
+A-S-- de-select
+
+C-A-/ to toggle comment lines and selected blocks
+C-S-/ to toggle comment out a selected block with /* ... */,
+
+C-D to duplicate a line or  selected lines
+C-S-A Actions Palette
+        Move line Down
+
+A-S-. select symbol at caret
+      select next occurrence
+A-S-, deselect the last occurrence
+A-S-; to select all occurrences
+After selection you can type the text to replace with,
+C-S activate basic selection menu
+C-S-Enter to complete statement.
+C-S * 2 to get suggestions for static constants
+. after parenthesis code to see list of postfix completion suggestion
+C-S-Enter to complete statement, or generate code block,()then this will induce if
+
+
+
+
+
+
+

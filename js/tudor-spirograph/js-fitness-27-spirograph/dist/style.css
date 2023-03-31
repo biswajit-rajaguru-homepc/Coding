@@ -1,0 +1,154 @@
+@charset "UTF-8";
+html, body, .c {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  background: radial-gradient(rgba(11, 35, 57, 0.001), rgba(0, 0, 0, 0.99)), 
+  linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0.3125em, rgba(0, 0, 0, 0) 0.3125em) calc(50vw - 0.15625em) 0,
+   linear-gradient(rgba(255, 255, 255, 0.4) 0.3125em, rgba(0, 0, 0, 0) 0.3125em) 0 calc(50vh - 0.15625em), linear-gradient(90deg, rgba(220, 220, 220, 0.15) 0.25em, rgba(0, 0, 0, 0) 0.25em) calc(50vw - 0.125em) 0, linear-gradient(rgba(220, 220, 220, 0.15) 0.25em, rgba(0, 0, 0, 0) 0.25em) 0 calc(50vh - 0.125em), linear-gradient(90deg, rgba(192, 192, 192, 0.1) 0.125em, rgba(0, 0, 0, 0) 0.125em) calc(50vw - 0.0625em) 0, linear-gradient(rgba(192, 192, 192, 0.1) 0.125em, rgba(0, 0, 0, 0) 0.125em) 0 calc(50vh - 0.0625em) #0b2339;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 10em 10em, 10em 10em, 2em 2em, 2em 2em;
+  font: 1em verdana, sans-serif;
+}
+
+.c {
+  position: absolute;
+  z-index: -1;
+}
+
+.controls {
+  position: absolute;
+  bottom: 100%;
+  padding: 0 .5em;
+  background: #111;
+  color: #eee;
+  transition: .35s ease-out;
+}
+.controls--open {
+  transform: translateY(100%);
+}
+.controls section {
+  margin: .75em 0;
+  padding: .5em;
+  border-radius: .25em;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
+}
+.controls button, .controls input, .controls [type='radio'] + label {
+  cursor: pointer;
+}
+.controls button {
+  border: none;
+  font: 1em/2 verdana, sans-serif;
+  transition: .3s;
+}
+.controls button:hover {
+  color: greenyellow;
+  background: #333;
+}
+.controls input[type='range'] {
+  -webkit-appearance: none;
+  display: block;
+  margin: .5em 0 1em;
+  padding: 0;
+  width: 100%;
+  height: 1.5em;
+  background: grey;
+}
+.controls input[type='range'][id='hue'] {
+  background: linear-gradient(90deg, #ff0000, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, #ffff00, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, #00ff00, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, #00ffff, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, #0000ff, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, #ff00ff, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b);
+}
+.controls input[type='range'][id='hue']::-webkit-slider-runnable-track {
+  background: transparent;
+}
+.controls input[type='range'][id='hue']::-moz-range-track {
+  background: transparent;
+}
+.controls input[type='range'][id='hue']::-ms-track {
+  background: transparent;
+}
+.controls input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 1.5em;
+  background: transparent;
+}
+.controls input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: .5em;
+  height: 1.5em;
+  box-shadow: 0 0 1px 1px #0b2339;
+  background: whitesmoke;
+  cursor: ew-resize;
+}
+.controls input[type='range']::-moz-range-track {
+  height: 1.5em;
+  background: transparent;
+}
+.controls input[type='range']::-moz-range-thumb {
+  border-radius: 0;
+  width: .5em;
+  height: 1.5em;
+  box-shadow: 0 0 1px 1px #0b2339;
+  background: whitesmoke;
+  cursor: ew-resize;
+}
+.controls input[type='range']::-ms-track {
+  height: 1.5em;
+  background: transparent;
+  padding: 0;
+  color: transparent;
+}
+.controls input[type='range']::-ms-thumb {
+  width: .5em;
+  height: 1.5em;
+  box-shadow: 0 0 1px 1px #0b2339;
+  background: whitesmoke;
+  cursor: ew-resize;
+}
+.controls input[type='range']::-ms-fill-lower, .controls input[type='range']::-ms-fill-upper {
+  background: transparent;
+}
+.controls input[type='range']::-ms-tooltip {
+  display: none;
+}
+.controls input[type='range']:focus {
+  outline: none;
+}
+.controls input[type='radio'] {
+  display: none;
+}
+.controls input[type='radio'] + label {
+  display: inline-block;
+  color: lightsalmon;
+}
+.controls input[type='radio'] + label:last-child {
+  margin-right: .5em;
+}
+.controls input[type='radio'] + label:before {
+  display: inline-block;
+  margin: 0 .25em;
+  transform: translateY(0.125em);
+  font: 1.5em/1 verdana, sans-serif;
+  content: '☒';
+}
+.controls input[type='radio']:checked + label {
+  color: greenyellow;
+}
+.controls input[type='radio']:checked + label:before {
+  content: '☑';
+}
+.controls input:checked + label {
+  color: greenyellow;
+}
+.controls .controls__btns {
+  text-align: center;
+  box-shadow: none;
+}
+.controls [id='toggle'] {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}

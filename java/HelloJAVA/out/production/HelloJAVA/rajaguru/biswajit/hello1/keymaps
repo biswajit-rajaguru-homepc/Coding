@@ -1,0 +1,20 @@
+--------------------
+IDEA
+
+
+C-, recent files
+C-S-J Join lines
+C-.
+C-A-[click,up,down] Multicursors
+C-[PgUp. PgDn]-[shift]
+C-S-D,C-D Copy lines [down,just copy]
+C-L delete line
+C-[del,bkspc] delete till end of word to [right,left]
+C-[right,left] Move one word to [right, left]
+C-],[
+C-A-S-][
+C-S-enter
+Drag-tab to activate split window
+C-k X See available templates
+C-Spc activate code completion
+S-enter complete line

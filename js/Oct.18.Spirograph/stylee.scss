@@ -1,0 +1,191 @@
+$grid-major-c: rgba(gainsboro, .15);
+$grid-minor-c: rgba(silver, .1);
+$grid-major-th: .1em;
+$grid-minor-th: .1em;
+$grid-major-s: 10em;
+$grid-minor-s: calc($grid-major-s/10);
+$axis-c: rgba(white, .4);
+$axis-th: 0.5*$grid-major-th;
+$bg: darken(#143d63, 10%);
+$hue-grad-list: ();
+
+@mixin track() {
+    height: 1.5em;
+    background: transparent;    
+}
+
+@mixin h-track() {
+    background: transparent;   
+}
+
+@mixin thumb() {
+    width: .5em;
+    height: 1.5em;
+    box-shadow: 0 0 1px 1px $bg;
+    background: whitesmoke;
+    cursor: ew-resize;    
+}
+
+@for $i from 0 to 36 {
+    $hue-grad-list: append($hue-grad-list,hsl($i*10, 100%, 50%), comma);
+ }
+
+ html, body, .c {
+    width: 100%;
+    height: 100%;
+ }
+
+ body {
+    overflow: hidden;
+    margin: 0;
+    background: 
+    radial-gradient(rgba($bg, .001), darken(rgba($bg, .99), 20)),
+    linear-gradient(90deg,$axis-c $axis-th,transparent $axis-th) calc(50vw - #{$axis-th/2}) 0, 
+    linear-gradient($axis-c $axis-th,transparent $axis-th) 0 calc(50vh - #{$axis-th/2}), 
+    
+    linear-gradient(90deg,$grid-minor-c $grid-minor-th,transparent $grid-minor-th) calc(50vw - #{$grid-minor-th/2}) 0, 
+    linear-gradient($grid-minor-c $grid-minor-th,transparent $grid-minor-th) 0 calc(50vh - #{$grid-minor-th/2}) darken(#143d63, 10%);
+    background-size: 100% 100%,100% 100%,100% 100%,$grid-minor-s  $grid-minor-s,$grid-minor-s $grid-minor-s;
+    font: 1em verdana, sans-serif;
+
+ }
+// linear-gradient(90deg, $grid-major-c $grid-major-th,transparent $grid-major-th) calc(50vw - #{$grid-major-th/2}) 0, 
+// linear-gradient($grid-major-c $grid-major-th,transparent $grid-major-th) 0 calc(50vh - #{$grid-major-th/2}), 
+// 
+
+ .c{
+    position: absolute;
+    z-index: -1;
+ }
+
+ .controls {
+    position:absolute;
+    bottom: 100%;
+    padding:0 .5em;
+    background: #111;
+    color: #eee;
+    transition: .35s ease-out;
+    &--open {
+        transform: translateY(100%);
+    }
+
+    section {
+        margin: .75em 0;
+        padding: .5em;
+        border-radius: .25em;
+        box-shadow: 0 0 2px rgba(white, .25);
+    }
+
+    button, input, [type='radio'] + label {
+        cursor: pointer;
+    }
+
+    button {
+        border: none;
+        font: calc(1em/2) verdana, sans-serif;
+        transition: .3s;
+
+        &:hover {
+            color:greenyellow;
+            background: #333;
+        }
+    }
+
+    input[type='range'] {
+        -webkit-appearance: none;
+        display: block;
+        margin: 0.5em 0 1em;
+        padding: 0;
+        width: 100%;
+        height: 1.5em;
+        background: grey;
+
+        &[id='hue'] {
+            background: linear-gradient(90deg, $hue-grad-list);
+            &::-webkit-slider-runnable-track {
+                @include h-track();
+            }
+
+            &::-moz-range-track { @include h-track();}
+            &::-ms-track {@include h-track();}
+       
+        }
+        &::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            @include track();
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            @include thumb();
+        }
+
+        &::-moz-range-track { @include track();}
+
+        &::-moz-range-thumb {
+            border-radius: 0;
+            @include thumb();
+        }
+        &::-ms-track {
+            @include track();
+            padding: 0;
+            color: transparent;
+          }
+          
+          &::-ms-thumb {
+            @include thumb();
+          }
+
+          &::-ms-fill-lower, &::-ms-fill-upper {
+            background: transparent;
+          }
+          
+          &::-ms-tooltip { display: none; }
+          
+          &:focus {outline: none;}
+    }
+
+    input[type='radio'] {
+        display: none;
+
+        & + label {
+            display: inline-block;
+            color: lightsalmon;
+
+            &:last-child { margin-right: .5em;}
+
+            &:before {
+                display: inline-block;
+                margin: 0 0.25em;
+                transform: translateY(.125em);
+                font: calc(1.5em) verdana sans-serif;
+                content: '☒';
+            }
+        }
+
+        &:checked + label {
+            color: greenyellow;
+
+            &:before {
+                content: '☑';
+            }
+        }
+
+    }
+
+    input:checked + label { color: greenyellow;}
+
+    & &__btns {
+        text-align: center;
+        box-shadow: none;
+    }
+
+    [id='toggle'] {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+
+ }

@@ -1,0 +1,1 @@
+alphabet = Array.from(Array(26).keys()).map((c) => String.fromCharCode(c + 97))

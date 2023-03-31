@@ -1,0 +1,3 @@
+- system("bash shell command");
+- VSCode : substitute word c-d c-c  then c-d c-v at new word
+- for(int i: <vector>) 

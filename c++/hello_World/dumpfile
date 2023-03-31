@@ -1,0 +1,54 @@
+//system("read -r -s -n 1 -p \"hello: \"");
+   
+//    string colors[5] = {"red", "blue", "black", "green", "orange"};
+//    bool is_true = true;
+
+//    if(is_true) {
+//     cout << "true\n";
+//    } 
+   
+//    else {
+//     cout << "false\n" ;
+//    }
+
+//    is_true ? cout << "true \n" : cout << "false\n" ;
+
+
+// kfjkdjf kfjkdjf kfjkdjf k kfjkdjf kjkfjdslkj ljkjfkdljf l ljfkjlkfjl lfljdlkdjf
+
+// enum rice_dish { white_rice, biryani, pulao, taiyar_sadam };
+float sum(float a = 0, float b = 0);
+// rice_dish sunday_rice = biryani;
+
+// switch (0)
+// {
+// case white_rice: cout << "Busy ?\n"; 
+//                  break ;
+                 
+
+// case biryani: cout << "Mutton or Chicken ?\n";
+//                  break;
+
+// case pulao: cout << "Vegetable ?";
+//                  break;
+
+// case taiyar_sadam: cout << "troubled Stomach ?\n";
+//                  break;
+
+// default:
+//     break;
+// }
+ //cout << sum(5)<< endl;
+
+//  
+
+//  float list[5] = {1,2,3,4,5};
+//     cout<<"list - "<< list<<". list[0]- "<< list[0]<<". address list[0] " << &list[0]<<endl;
+//     float* ptr = list;
+//     int cntr=0;
+//     while(cntr<5){
+//         cout<<"list[cntr] - " << list[cntr]<<". ptr - ";
+//         cout<<ptr<<". *ptr - "<<*ptr<<endl;
+//         cntr++;ptr++;
+
+//     }

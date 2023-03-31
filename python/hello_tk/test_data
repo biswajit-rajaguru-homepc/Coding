@@ -1,0 +1,17 @@
+$ cd /
+$ ls
+4 g
+dir a
+dir b
+123 f1
+234 f2
+$ cd a
+$ ls
+dir a1
+234 a2
+678 a3
+$ cd a1
+$ ls
+123 a4
+$ cd ..
+$ cd .. 

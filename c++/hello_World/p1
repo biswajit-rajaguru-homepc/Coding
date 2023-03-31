@@ -1,0 +1,14 @@
+
+
+if(argc == 1) {
+        cout << "Too few arguments.\nexiting ..\n";
+        exit(0);
+    }
+
+    string name( argv[1]);
+    while(true) {
+
+        print_menu(name);
+
+    }
+    

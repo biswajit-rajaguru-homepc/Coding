@@ -1,0 +1,43 @@
+
+html {
+    /* background-color: #003f6a; */
+    
+}
+
+body {
+    background-color: #000000;
+    
+}
+
+.mypage {
+    display:flex ;
+    width: 100vw;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.controlBar {
+    display:flex ;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.controlBar button{
+    margin: 1em;
+}
+
+.myAnimation {
+    display: block;
+    
+    border: 1px solid black;
+    width: 80%;
+    height:100%;
+    margin: 10px;
+}
